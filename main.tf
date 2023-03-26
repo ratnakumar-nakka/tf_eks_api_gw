@@ -3,3 +3,7 @@ module "api_gw" {
     name = var.api_gw_name 
     create_api_domain_name = var.create_api_domain_name 
 }
+
+module "eks" {
+    source = "github.com/ratnakumar-nakka/tf_module_Amazon_Elastic_Kubernetes_Service/"
+}
