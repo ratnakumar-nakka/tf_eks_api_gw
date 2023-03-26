@@ -8,11 +8,19 @@ terraform {
     }
   }
 
-  backend "s3" {
-    bucket = "tf-eks-api-gw"
-    key    = "terraform.tfstate"
-    region = "ap-south-1"
+  cloud {
+    organization = "ratna"
+
+    workspaces {
+      name = "tf_eks_api_gw"
+    }
   }
+
+  # backend "s3" {
+  #   bucket = "tf-eks-api-gw"
+  #   key    = "terraform.tfstate"
+  #   region = "ap-south-1"
+  # }
 
 }
 
