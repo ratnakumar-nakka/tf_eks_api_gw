@@ -10,7 +10,7 @@ module "api_gw" {
 
 resource "aws_instance" "web" {
   ami           = "ami-0376ec8eacdf70aae"
-  instance_type = "t3.micro"
+  instance_type = "t2.micro"
 
   tags = {
     Name = "HelloWorld"
