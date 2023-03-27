@@ -12,7 +12,7 @@ resource "aws_instance" "web" {
   ami           = "ami-0376ec8eacdf70aae"
   instance_type = "t3.micro"
 
-  # tags = {
-  #   Name = "HelloWorld"
-  # }
+  tags = {
+    Name = "HelloWorld"
+  }
 }
